@@ -1,6 +1,7 @@
 Nachos|Maggi Mexican Nachos Recipe Base|Mince|Chilli Beans,Corn Chips,Cheese,Tinned Tomato's
-Cottage Pie|Maggi Cottage Pie Recipe Base|Mince|Tinned Tomatos,Potato's,Frozen Mixed Vege,Onions,Cheese
-Satay Chicken|Maggi Satay Chicken Recipe Base|Chicken|Onion,Capsicum,Peanut Butter,Noodles OR Potato's
+Cottage Pie|Maggi Cottage Pie Recipe Base|Mince|Tinned Tomatos,Potatoes,Frozen Mixed Vege,Onions,Cheese
+Satay Chicken|Maggi Satay Chicken Recipe Base|Chicken|Onion,Capsicum,Peanut Butter,Noodles OR Potatoes
 Butter Chicken|Maggi Butter Chicken Recipe Base|Chicken|Onion,Cream,Tomato Paste
-Curried Sausages|Maggi Mild Curry Sausages Recipe Bas|Sausages|Onion
-Devilled Sausages|Maggi Devilled Sausages recipe Base|Sausages|Onion,Apples,Tomato Sauce/Tomato Paste
+Apricot Chicken|Maggi Apricot  Chicken Recipe Base|Chicken|1x Tin Apricot Halves in juice,Onion,Potatoes
+Curried Sausages|Maggi Mild Curry Sausages Recipe Base|Sausages|Onion
+Devilled Sausages|Maggi Devilled Sausages recipe Base|Sausages|Onion,Apples,Tomato Sauce/Tomato Paste,Potatoes

@@ -38,13 +38,16 @@ namespace FeedME
             Banner();
             Console.WriteLine("Please enter the number of the option you require");
             Console.WriteLine("[1] Create New Shopping List");
-            Console.WriteLine("[2] Add  Dinner Items To current  Shopping List");
-
-            Console.WriteLine("[3] View Current Shopping List");
-            Console.WriteLine("[4] Add new Dinner Recipe");
+            Console.WriteLine("[2] Add Items to shopping list using meal options");
+            Console.WriteLine("[3] Add Items to shopping list");
+            Console.WriteLine("[4] View Current Shopping List");
+            
             Console.WriteLine("[5] Remove Duplicate Items from list");
-            Console.WriteLine("[6]Add regular items to shopping list");
-            Console.WriteLine("[7] Erase Current Shopping List");
+           
+
+            Console.WriteLine("[6] Erase Current Shopping List");
+            Console.WriteLine("[7] Remove items from shopping list (If you already have some of the items needed for a chosen dish)");
+            Console.WriteLine("[8] Add New Dinner Recipe");
             string MenuChoice = Console.ReadLine();
 
             if (MenuChoice == "1")
@@ -59,12 +62,12 @@ namespace FeedME
 
             if (MenuChoice == "3")
             {
-                showCurrentList();
+               AddRegularItemsToShoppingList();
             }
 
             if (MenuChoice == "4")
             {
-                AddNewRecipe();
+                showCurrentList();
             }
 
             if (MenuChoice == "5")
@@ -72,16 +75,46 @@ namespace FeedME
                 RemoveDuplicateItems();
             }
             if (MenuChoice == "6")
-            {
-                AddRegularItemsToShoppingList();
+            { 
+                EraseCurrentShoppingList();
             }
 
             if (MenuChoice == "7")
             {
-               EraseCurrentShoppingList();
+                RemoveItemsFromList();
+            }
+             if (MenuChoice =="8")
+            {
+                AddNewRecipe();
             }
         }
-
+        public static void RemoveItemsFromList()
+        {
+            Banner();
+            List<string> GroceryList = System.IO.File.ReadLines("./ShoppingList.txt").ToList();
+       
+           
+            Console.WriteLine("Please enter the number of the item you wish to remove");
+            int Count = 0;
+            foreach (string Grocery in GroceryList)
+            {
+                Console.WriteLine("["+Count+"]"+Grocery);
+                Count ++;
+            }
+            int ItemChoice = int.Parse(Console.ReadLine());
+            GroceryList.RemoveAt(ItemChoice);
+            string TheList = GroceryList.ToString();
+            using (StreamWriter Writer = File.CreateText("./ShoppingList.txt"))
+            {
+                foreach (string Grocery in GroceryList)
+                {
+                    Writer.WriteLine(Grocery);
+             
+                }
+            
+            }
+            showCurrentList();
+        }
         private static void AddRegularItemsToShoppingList()
         {
 
@@ -121,7 +154,8 @@ namespace FeedME
             using (StreamWriter writer = File.CreateText("./ShoppingList.txt"))
             {
                 string addItems = dinnerArray[DinnerChoice].Ingredients.ToString();
-                addItems = addItems + "," + dinnerArray[DinnerChoice].Meat;
+
+                addItems = addItems + "," + dinnerArray[DinnerChoice].Meat +","+ dinnerArray[DinnerChoice].RecipeBase;
                 addItems = addItems.Replace(',', '\n');
                 writer.WriteLine(addItems);
             }
@@ -185,17 +219,17 @@ namespace FeedME
                 Dcount++;
             }
             int DinnerChoice = int.Parse(Console.ReadLine());
-
             using (StreamWriter writer = File.AppendText("./ShoppingList.txt"))
             {
                 string addItems = dinnerArray[DinnerChoice].Ingredients.ToString();
 
-                addItems = addItems + "," + dinnerArray[DinnerChoice].Meat;
+                addItems = addItems + "," + dinnerArray[DinnerChoice].Meat + "," + dinnerArray[DinnerChoice].RecipeBase;
                 addItems = addItems.Replace(',', '\n');
                 writer.WriteLine(addItems);
             }
 
             showCurrentList();
+
 
         }
         public static void RemoveDuplicateItems()
