@@ -1,0 +1,8 @@
+C:\Users\Patrick\Documents\GitHub\FeedME\bin\Debug\FeedME.exe.config
+C:\Users\Patrick\Documents\GitHub\FeedME\bin\Debug\FeedME.exe
+C:\Users\Patrick\Documents\GitHub\FeedME\bin\Debug\FeedME.pdb
+C:\Users\Patrick\Documents\GitHub\FeedME\obj\Debug\FeedME.csproj.AssemblyReference.cache
+C:\Users\Patrick\Documents\GitHub\FeedME\obj\Debug\FeedME.csproj.SuggestedBindingRedirects.cache
+C:\Users\Patrick\Documents\GitHub\FeedME\obj\Debug\FeedME.csproj.CoreCompileInputs.cache
+C:\Users\Patrick\Documents\GitHub\FeedME\obj\Debug\FeedME.exe
+C:\Users\Patrick\Documents\GitHub\FeedME\obj\Debug\FeedME.pdb

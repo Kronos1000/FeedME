@@ -1,0 +1,5 @@
+Milk|Milk
+Margerine|Margerine
+Bread|Bread 
+Breakfast Cereal|Cereal
+Lunch Meat|Lunch Meat
