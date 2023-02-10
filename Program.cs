@@ -48,6 +48,7 @@ namespace FeedME
             Console.WriteLine("[6] Erase Current Shopping List");
             Console.WriteLine("[7] Remove items from shopping list (If you already have some of the items needed for a chosen dish)");
             Console.WriteLine("[8] Add New Dinner Recipe");
+            Console.WriteLine("[9] Exit Program");
             string MenuChoice = Console.ReadLine();
 
             if (MenuChoice == "1")
@@ -86,6 +87,11 @@ namespace FeedME
              if (MenuChoice =="8")
             {
                 AddNewRecipe();
+            }
+
+             if (MenuChoice =="9")
+            {
+                ExitProgram();
             }
         }
         public static void RemoveItemsFromList()
@@ -155,11 +161,11 @@ namespace FeedME
             {
                 string addItems = dinnerArray[DinnerChoice].Ingredients.ToString();
 
-                addItems = addItems + "," + dinnerArray[DinnerChoice].Meat +","+ dinnerArray[DinnerChoice].RecipeBase;
+                addItems = addItems + "," + dinnerArray[DinnerChoice].Ingredients;
                 addItems = addItems.Replace(',', '\n');
                 writer.WriteLine(addItems);
             }
-
+            RemoveDuplicateItems();
             showCurrentList();
 
 
@@ -223,11 +229,11 @@ namespace FeedME
             {
                 string addItems = dinnerArray[DinnerChoice].Ingredients.ToString();
 
-                addItems = addItems + "," + dinnerArray[DinnerChoice].Meat + "," + dinnerArray[DinnerChoice].RecipeBase;
+                addItems = addItems + "," + dinnerArray[DinnerChoice].Ingredients;
                 addItems = addItems.Replace(',', '\n');
                 writer.WriteLine(addItems);
             }
-
+            RemoveDuplicateItems();
             showCurrentList();
 
 
@@ -267,22 +273,17 @@ namespace FeedME
             Console.WriteLine("Please Enter the name of the dinner you wish to add");
             string Recipe = Console.ReadLine();
             Banner();
-            Console.WriteLine("Please enter the recipe base  that is used to create this dish");
-            string RecipeBase = Console.ReadLine();
-            Banner();
-            Console.WriteLine("Please enter the meat used in this dish (If none if used enter N/A)");
-            string Meat = Console.ReadLine();
-            Banner();
-            Console.WriteLine("Please enter all ingredients (except the meat) That are needed to prepare this dish seperated by a Comma");
+
+            Console.WriteLine("Please enter all ingredients That are needed to prepare this dish seperated by a Comma");
             string Ingredients= Console.ReadLine();
             Banner();
-            string RecipeToADD = Recipe + "|" + RecipeBase + "|" + Meat + "|" + Ingredients+',';
-            string RequiredIngredients = RecipeBase +"," + Meat  +","+ Ingredients;
+           // string RecipeToADD = Recipe + "|" + RecipeBase + "|" + Meat + "|" + Ingredients+',';
+            string RequiredIngredients =  Ingredients;
 
             RequiredIngredients = RequiredIngredients.Replace(',', '\n');
             using (StreamWriter writer = File.AppendText("./DinnerFood.txt"))
             {
-                writer.WriteLine(RecipeToADD);
+                writer.WriteLine(Recipe+"|"+Ingredients+",");
             }
 
             Console.WriteLine("You have Added the Following Recipe to the Menu:");
@@ -316,11 +317,10 @@ namespace FeedME
                     string line = reader.ReadLine();
                     string [] parts = line.Split('|');
                     string recipe= parts[0];
-                    string recipeBase = parts[1];
-                    string meat = parts[2];
-                    string ingredients = parts[3];
+               
+                    string ingredients = parts[1];
 
-                    Dinner D = new Dinner(recipe, recipeBase, meat, ingredients);
+                    Dinner D = new Dinner(recipe, ingredients);
                     DinnerList.Add(D);
                 }
                 
@@ -353,9 +353,16 @@ namespace FeedME
             return RegularItemList;
         }
 
+
+        private static void ExitProgram()
+        {
+            System.Environment.Exit(0);
+        }
+
+
     }
 
 
 
-    }
+}
 

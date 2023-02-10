@@ -16,22 +16,7 @@ namespace FeedME
             set { recipe = value; }
         }
 
-        private string recipeBase;
-
-        public string RecipeBase
-        {
-            get { return recipeBase; }
-            set { recipeBase = value; }
-        }
-
-        private string  meat;
-
-        public string  Meat
-        {
-            get { return meat; }
-            set { meat = value; }
-        }
-
+      
 
         private string  ingredients;
 
@@ -41,11 +26,10 @@ namespace FeedME
             set { ingredients = value; }
         }
 
-        public Dinner(string recipe, string recipeBase, string meat, string ingredients)
+        public Dinner(string recipe, string ingredients)
         {
             Recipe = recipe;
-            RecipeBase = recipeBase;
-            Meat = meat;
+          
             Ingredients = ingredients;
         }   
 
