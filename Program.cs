@@ -92,7 +92,9 @@ namespace FeedME
              if (MenuChoice =="9")
             {
                 ExitProgram();
+
             }
+
         }
         public static void RemoveItemsFromList()
         {
@@ -113,7 +115,7 @@ namespace FeedME
             using (StreamWriter Writer = File.CreateText("./ShoppingList.txt"))
             {
                 foreach (string Grocery in GroceryList)
-                {
+             {
                     Writer.WriteLine(Grocery);
              
                 }

@@ -1,11 +1,4 @@
-Pasta
-Bacon
-Cheese
-Maggi Cottage Pie Recipe Base
-Mince
-Tinned Tomatos
-Potatoes
-Frozen Mixed Vege
-Onions
-meat
-cheese
+Maggi Mild Curry Sausages Recipe Base
+Sausages
+Onion
+
