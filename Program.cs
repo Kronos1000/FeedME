@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using Microsoft.Win32;
+
 namespace FeedME
 {
     public class Program
@@ -77,7 +79,7 @@ namespace FeedME
             }
             if (MenuChoice == "6")
             { 
-                EraseCurrentShoppingList();
+                EraseShoppingListConfirmation();
             }
 
             if (MenuChoice == "7")
@@ -94,6 +96,7 @@ namespace FeedME
                 ExitProgram();
 
             }
+       
 
         }
         public static void RemoveItemsFromList()
@@ -195,6 +198,26 @@ namespace FeedME
             
         }
 
+        public static void EraseShoppingListConfirmation()
+        {
+            Banner();
+            Console.WriteLine("Are you sure you would like to erase all items from your current shopping list");
+            Console.WriteLine("Enter Yes OR No");
+
+            string  userDecision = Console.ReadLine();
+            userDecision = userDecision.ToUpper();
+            // Console.WriteLine(userDecision);
+            if(userDecision.Equals("YES"))
+            {
+                EraseCurrentShoppingList();
+            }
+
+            if (userDecision.Equals("NO"))
+            {
+                MainMenu();
+            }
+
+        }
 
         public static void EraseCurrentShoppingList()
         {
