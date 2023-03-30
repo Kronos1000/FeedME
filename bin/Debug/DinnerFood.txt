@@ -9,3 +9,5 @@ Lasagne|Mince,2x Tinned Tomatoes,Lasagne Sheets,Maggi Cheesy Lasagne Recipe Base
 Coconut Chicken Curry|1Kg Chicken breast,Kumara 600g,Chicken Stock,1x Tinned Coconut Milk,Rice,
 Maggi Chilli Con Carne|Mince,onion,Tinned Tomatoes,Red Kidney beans,Red Capsicum,Yellow Capsicum,Cheese,Sour Cream,Maggi Chilli Con Carne Recipe base 
 Devilled Sausages|Sausages,Onion,Apples,Potatoes,Tomato Sauce/Tomato Paste,Maggi Devilled Sausages Recipe Base,
+Baked Potatoes|Large Potatoes,2 Spring onions,Creamed corn/sweet corn,cheese,bacon
+Meatballs|Mince,eggs,BreadCrumbs,Tinned tomatoes,Spaghetti pasta,
