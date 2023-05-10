@@ -249,17 +249,44 @@ namespace FeedME
                 Console.WriteLine("[" + Dcount + "]" + dinner.Recipe);
                 Dcount++;
             }
+            int randomDinnerIndex = dinnerArray.Length +1 ;
+            Console.WriteLine("[" + randomDinnerIndex + "]" + "Choose for me");
             int DinnerChoice = int.Parse(Console.ReadLine());
-            using (StreamWriter writer = File.AppendText("./ShoppingList.txt"))
+            if (DinnerChoice != randomDinnerIndex)
             {
-                string addItems = dinnerArray[DinnerChoice].Ingredients.ToString();
+                using (StreamWriter writer = File.AppendText("./ShoppingList.txt"))
+                {
+                    string addItems = dinnerArray[DinnerChoice].Ingredients.ToString();
 
-                addItems = addItems + "," + dinnerArray[DinnerChoice].Ingredients;
-                addItems = addItems.Replace(',', '\n');
-                writer.WriteLine(addItems);
+                    addItems = addItems + "," + dinnerArray[DinnerChoice].Ingredients;
+                    addItems = addItems.Replace(',', '\n');
+                    writer.WriteLine(addItems);
+                }
+                RemoveDuplicateItems();
+                showCurrentList();
             }
-            RemoveDuplicateItems();
-            showCurrentList();
+
+            if (DinnerChoice == randomDinnerIndex)
+            {
+                using (StreamWriter writer = File.AppendText("./ShoppingList.txt"))
+                {
+                    Random RandDinner = new Random();
+                    int R = RandDinner.Next(0, dinnerArray.Length);
+                    string addItems = dinnerArray[R].Ingredients.ToString();
+
+                    addItems = addItems + "," + dinnerArray[R].Ingredients;
+           
+                    addItems = addItems.Replace(',', '\n');
+                    writer.WriteLine(addItems);
+                }
+                RemoveDuplicateItems();
+            
+             
+                showCurrentList();
+            }
+            // what happen if user chooses random option 
+
+
 
 
         }

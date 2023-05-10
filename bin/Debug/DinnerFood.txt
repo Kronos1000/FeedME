@@ -1,4 +1,4 @@
-Nachos|Maggi Mexican Nachos Recipe Base,Mince,Chilli Beans,Corn Chips,Cheese,Tinned Tomato's,
+Nachos|Maggi Mexican Nachos Recipe Base/Maggi taco seasoning ,Mince,Chilli Beans,Corn Chips,Cheese,Tinned Tomato's,onions,
 Cottage Pie|Maggi Cottage Pie Recipe Base,Mince,Tinned Tomatos,Potatoes,Frozen Mixed Vege,Onions,Cheese,
 Satay Chicken|Maggi Satay Chicken Recipe Base,Chicken,Onion,Capsicum,Peanut Butter,Noodles OR Potatoes,
 Butter Chicken|Maggi Butter Chicken Recipe Base,Chicken,Onion,Cream,Tomato Paste,Rice
@@ -10,4 +10,4 @@ Coconut Chicken Curry|1Kg Chicken breast,Kumara 600g,Chicken Stock,1x Tinned Coc
 Maggi Chilli Con Carne|Mince,onion,Tinned Tomatoes,Red Kidney beans,Red Capsicum,Yellow Capsicum,Cheese,Sour Cream,Maggi Chilli Con Carne Recipe base 
 Devilled Sausages|Sausages,Onion,Apples,Potatoes,Tomato Sauce/Tomato Paste,Maggi Devilled Sausages Recipe Base,
 Baked Potatoes|Large Potatoes,2 Spring onions,Creamed corn/sweet corn,cheese,bacon
-Meatballs|Mince,eggs,BreadCrumbs,Tinned tomatoes,Spaghetti pasta,
+Meatballs|Mince,eggs,BreadCrumbs,Tinned tomatoes,Spaghetti pasta,Maggi Meatballs recipe base
