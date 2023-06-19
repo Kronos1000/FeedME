@@ -11,3 +11,4 @@ Maggi Chilli Con Carne|Mince,onion,Tinned Tomatoes,Red Kidney beans,Red Capsicum
 Devilled Sausages|Sausages,Onion,Apples,Potatoes,Tomato Sauce/Tomato Paste,Maggi Devilled Sausages Recipe Base,
 Baked Potatoes|Large Potatoes,2 Spring onions,Creamed corn/sweet corn,cheese,bacon
 Meatballs|Mince,eggs,BreadCrumbs,Tinned tomatoes,Spaghetti pasta,Maggi Meatballs recipe base
+Homemade BigMac|Burger Patties,Cheese Slices,Burger Buns,Burger sauce (if you dont have it already) ,
